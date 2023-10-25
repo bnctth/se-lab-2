@@ -34,5 +34,18 @@ class TorpedoStoreTest {
 
     assertThrowsExactly(IllegalArgumentException.class, ()->store.fire(-1));
   }
+
+  @Test
+  void not_enough_torpedo(){
+    TorpedoStore store = new TorpedoStore(1);
+
+    assertThrowsExactly(IllegalArgumentException.class, ()->store.fire(2));
+  }
+
+  @Test
+  void torpedo_empty(){
+    TorpedoStore store = new TorpedoStore(0);
+    assertEquals(true,store.isEmpty());
+  }
     
 }

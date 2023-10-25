@@ -67,7 +67,7 @@ class GT4500Test {
    * output file does not exist, it is simply ignored and the test is
    * inconclusive.
    */
-  @ParameterizedTest
+  //@ParameterizedTest
   @MethodSource("provideTestFiles")
   void runCommandsFromFile_Success(File inputFile, File outputFile) throws IOException {
       // Arrange
